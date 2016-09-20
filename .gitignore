@@ -2,3 +2,4 @@
 *.py~
 *.pyo
 test_input.txt
+*.txt~
