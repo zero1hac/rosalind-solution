@@ -12,7 +12,7 @@ for i in range(E):
 visited = [False]*N
 
 def bfs(n):
-    visited[n-1] = 1
+    visited[n-1] = True
     queue = Q.Queue()
     queue.put(n)
     while not queue.empty():
@@ -24,11 +24,12 @@ def bfs(n):
 
 component = 0
 
-for i in range(N):
+for i in range(1, N+1):
+    #print visited, i
     if not visited[i-1]:
         visited[i-1] = True
         component+=1
-        bfs(i+1)
+        bfs(i)
 
 print component
 
